@@ -1,0 +1,1040 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: FCSParse::FCSEvent
+  
+    &mdash; Documentation by YARD 0.8.2.1
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../';
+  framesUrl = "../frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (F)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../FCSParse.html" title="FCSParse (module)">FCSParse</a></span></span>
+     &raquo; 
+    <span class="title">FCSEvent</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: FCSParse::FCSEvent
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">FCSParse::FCSEvent</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/fcsparse/fcsevent.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Class representing a single FCS-encoded event.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Author:</p>
+<ul class="author">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>Colin J. Fuller</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+  <h2>Constant Summary</h2>
+  
+    <dl class="constants">
+      
+        <dt id="DefaultDelimiter-constant" class="">DefaultDelimiter =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>default delimiter for printing output</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='string val'>&quot;,&quot;</span>
+</pre></dd>
+      
+    </dl>
+  
+
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#new_with_data_and_format-class_method" title="new_with_data_and_format (class method)">+ (FCSEvent) <strong>new_with_data_and_format</strong>(event_data_string, event_format_string, parameter_info_hash) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Creates a new FCSEvent from the specified information.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#%5B%5D-instance_method" title="#[] (instance method)">- (FCSParam) <strong>[]</strong>(parameter_name) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Gets a named parameter associated with the event.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#%5B%5D%3D-instance_method" title="#[]= (instance method)">- (Object) <strong>[]=</strong>(parameter_name, value) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Sets a named parameter associated with the event.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (FCSEvent) <strong>initialize</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of FCSEvent.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#names_to_s_delim-instance_method" title="#names_to_s_delim (instance method)">- (String) <strong>names_to_s_delim</strong>(delimiter) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Gets the names of the parameters associated with this event in alphabetical
+order as a string, delimited by the supplied delimiter.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_s-instance_method" title="#to_s (instance method)">- (String) <strong>to_s</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Converts the event to a string representation.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_s_delim-instance_method" title="#to_s_delim (instance method)">- (String) <strong>to_s_delim</strong>(delimiter) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Gets the values of the parameters associated with this event ordered 
+alphabetically by the parameter names (i.e. in the same order as when
+calling <span class='object_link'><a href="#names_to_s_delim-instance_method" title="FCSParse::FCSEvent#names_to_s_delim (method)">#names_to_s_delim</a></span>), delimited by the supplied delimiter.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="FCSParse::FCSEvent (class)">FCSEvent</a></span></tt>) <strong>initialize</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>A new instance of FCSEvent</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+75
+76
+77
+78
+79</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/fcsparse/fcsevent.rb', line 75</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_initialize identifier id'>initialize</span>
+  
+  <span class='rubyid_@values ivar id'>@values</span> <span class='assign token'>=</span> <span class='rubyid_Hash constant id'>Hash</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span>
+  
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="new_with_data_and_format-class_method">
+  
+    + (<tt><span class='object_link'><a href="" title="FCSParse::FCSEvent (class)">FCSEvent</a></span></tt>) <strong>new_with_data_and_format</strong>(event_data_string, event_format_string, parameter_info_hash) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Creates a new FCSEvent from the specified information.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>event_data_string</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the raw data corresponding to the entire event from the fcs file</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>event_format_string</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a string suitable for use with String#unpack that can decode the raw data.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>parameter_info_hash</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a hash containing at minimum the parameters from the text section
+specifying the names and ranges of the parameters keys should be the
+parameter names from the fcs file format converted to symbols ($ included),
+and values should be a string corresponding to the value of the parameter
+from the fcs file.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="FCSParse::FCSEvent (class)">FCSEvent</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>an FCSEvent that has been created by parsing the raw data.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/fcsparse/fcsevent.rb', line 96</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_new_with_data_and_format identifier id'>new_with_data_and_format</span><span class='lparen token'>(</span><span class='rubyid_event_data_string identifier id'>event_data_string</span><span class='comma token'>,</span> <span class='rubyid_event_format_string identifier id'>event_format_string</span><span class='comma token'>,</span> <span class='rubyid_parameter_info_hash identifier id'>parameter_info_hash</span><span class='rparen token'>)</span>
+
+  <span class='rubyid_data_points identifier id'>data_points</span> <span class='assign token'>=</span> <span class='rubyid_event_data_string identifier id'>event_data_string</span><span class='dot token'>.</span><span class='rubyid_unpack identifier id'>unpack</span><span class='lparen token'>(</span><span class='rubyid_event_format_string identifier id'>event_format_string</span><span class='rparen token'>)</span>
+  
+  <span class='rubyid_parameter_names identifier id'>parameter_names</span> <span class='assign token'>=</span> <span class='rubyid_Hash constant id'>Hash</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span>
+  <span class='rubyid_parameter_limits identifier id'>parameter_limits</span> <span class='assign token'>=</span> <span class='rubyid_Hash constant id'>Hash</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span>
+  
+  <span class='rubyid_parameter_info_hash identifier id'>parameter_info_hash</span><span class='dot token'>.</span><span class='rubyid_each_key identifier id'>each_key</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_k identifier id'>k</span><span class='bitor op'>|</span>
+    
+    <span class='rubyid_matchobj identifier id'>matchobj</span> <span class='assign token'>=</span> <span class='rubyid_k identifier id'>k</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span><span class='dot token'>.</span><span class='rubyid_match identifier id'>match</span><span class='lparen token'>(</span><span class='rubyid_T_ParameterNameKeywordRegex constant id'>T_ParameterNameKeywordRegex</span><span class='rparen token'>)</span>
+    
+    
+    <span class='rubyid_if if kw'>if</span> <span class='rubyid_matchobj identifier id'>matchobj</span> <span class='rubyid_then then kw'>then</span>
+      
+      <span class='rubyid_parameter_names identifier id'>parameter_names</span><span class='lbrack token'>[</span><span class='rubyid_matchobj identifier id'>matchobj</span><span class='lbrack token'>[</span><span class='integer val'>1</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_to_i identifier id'>to_i</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_parameter_info_hash identifier id'>parameter_info_hash</span><span class='lbrack token'>[</span><span class='rubyid_k identifier id'>k</span><span class='rbrack token'>]</span>
+      
+    <span class='rubyid_end end kw'>end</span>
+      
+
+    <span class='rubyid_matchobj identifier id'>matchobj</span> <span class='assign token'>=</span> <span class='rubyid_k identifier id'>k</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span><span class='dot token'>.</span><span class='rubyid_match identifier id'>match</span><span class='lparen token'>(</span><span class='rubyid_T_ParameterRangeKeywordRegex constant id'>T_ParameterRangeKeywordRegex</span><span class='rparen token'>)</span>
+    
+    <span class='rubyid_if if kw'>if</span> <span class='rubyid_matchobj identifier id'>matchobj</span> <span class='rubyid_then then kw'>then</span>
+      
+      <span class='rubyid_parameter_limits identifier id'>parameter_limits</span><span class='lbrack token'>[</span><span class='rubyid_matchobj identifier id'>matchobj</span><span class='lbrack token'>[</span><span class='integer val'>1</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_to_i identifier id'>to_i</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_parameter_info_hash identifier id'>parameter_info_hash</span><span class='lbrack token'>[</span><span class='rubyid_k identifier id'>k</span><span class='rbrack token'>]</span>
+
+    <span class='rubyid_end end kw'>end</span>
+
+  <span class='rubyid_end end kw'>end</span>
+  
+  <span class='rubyid_ordered_indices identifier id'>ordered_indices</span> <span class='assign token'>=</span> <span class='rubyid_parameter_names identifier id'>parameter_names</span><span class='dot token'>.</span><span class='rubyid_keys identifier id'>keys</span><span class='dot token'>.</span><span class='rubyid_sort identifier id'>sort</span>
+        
+  <span class='rubyid_event identifier id'>event</span> <span class='assign token'>=</span> <span class='rubyid_new identifier id'>new</span>      
+  
+  <span class='rubyid_data_points identifier id'>data_points</span><span class='dot token'>.</span><span class='rubyid_each_with_index identifier id'>each_with_index</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_e identifier id'>e</span><span class='comma token'>,</span> <span class='rubyid_i identifier id'>i</span><span class='bitor op'>|</span>
+  
+    <span class='rubyid_param identifier id'>param</span> <span class='assign token'>=</span> <span class='rubyid_FCSParam constant id'>FCSParam</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_parameter_names identifier id'>parameter_names</span><span class='lbrack token'>[</span><span class='rubyid_ordered_indices identifier id'>ordered_indices</span><span class='lbrack token'>[</span><span class='rubyid_i identifier id'>i</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='rubyid_nil nil kw'>nil</span><span class='comma token'>,</span> <span class='rubyid_e identifier id'>e</span><span class='comma token'>,</span> <span class='rubyid_parameter_limits identifier id'>parameter_limits</span><span class='lbrack token'>[</span><span class='rubyid_ordered_indices identifier id'>ordered_indices</span><span class='lbrack token'>[</span><span class='rubyid_i identifier id'>i</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
+    
+    <span class='rubyid_event identifier id'>event</span><span class='lbrack token'>[</span><span class='rubyid_param identifier id'>param</span><span class='dot token'>.</span><span class='rubyid_name identifier id'>name</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_param identifier id'>param</span>
+    
+  <span class='rubyid_end end kw'>end</span>
+  
+  <span class='rubyid_event identifier id'>event</span>
+          
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="[]-instance_method">
+  
+    - (<tt><span class='object_link'><a href="FCSParam.html" title="FCSParse::FCSParam (class)">FCSParam</a></span></tt>) <strong>[]</strong>(parameter_name) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Gets a named parameter associated with the event.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>parameter_name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the name of the parameter to retrieve; this should be  exactly the name
+specified for the parameter in the text section of the fcs file</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="FCSParam.html" title="FCSParse::FCSParam (class)">FCSParam</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>an FCSParam object that holds the information about the named parameter.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+149
+150
+151
+152
+153</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/fcsparse/fcsevent.rb', line 149</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='aref op'>[]</span><span class='lparen token'>(</span><span class='rubyid_parameter_name identifier id'>parameter_name</span><span class='rparen token'>)</span>
+  
+  <span class='rubyid_@values ivar id'>@values</span><span class='lbrack token'>[</span><span class='rubyid_parameter_name identifier id'>parameter_name</span><span class='rbrack token'>]</span>
+  
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="[]=-instance_method">
+  
+    - (<tt>Object</tt>) <strong>[]=</strong>(parameter_name, value) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Sets a named parameter associated with the event.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>parameter_name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the name of the parameter to retrieve; this should be  exactly the name
+specified for the parameter in the text section of the fcs file</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="FCSParam.html" title="FCSParse::FCSParam (class)">FCSParam</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>an FCSParam object that holds the information about the named parameter.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+162
+163
+164
+165
+166</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/fcsparse/fcsevent.rb', line 162</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='aset op'>[]=</span><span class='lparen token'>(</span><span class='rubyid_parameter_name identifier id'>parameter_name</span><span class='comma token'>,</span> <span class='rubyid_value identifier id'>value</span><span class='rparen token'>)</span>
+  
+  <span class='rubyid_@values ivar id'>@values</span><span class='lbrack token'>[</span><span class='rubyid_parameter_name identifier id'>parameter_name</span><span class='rbrack token'>]</span><span class='assign token'>=</span> <span class='rubyid_value identifier id'>value</span>
+  
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="names_to_s_delim-instance_method">
+  
+    - (<tt>String</tt>) <strong>names_to_s_delim</strong>(delimiter) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Gets the names of the parameters associated with this event in alphabetical
+order as a string, delimited by the supplied delimiter.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>delimiter</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a String containing the desired delimiter.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a String containing delimited alphabetized parameter names.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+175
+176
+177
+178
+179
+180
+181</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/fcsparse/fcsevent.rb', line 175</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_names_to_s_delim identifier id'>names_to_s_delim</span><span class='lparen token'>(</span><span class='rubyid_delimiter identifier id'>delimiter</span><span class='rparen token'>)</span>
+  
+  <span class='rubyid_all_param_names identifier id'>all_param_names</span> <span class='assign token'>=</span> <span class='rubyid_@values ivar id'>@values</span><span class='dot token'>.</span><span class='rubyid_keys identifier id'>keys</span><span class='dot token'>.</span><span class='rubyid_sort identifier id'>sort</span>
+  
+  <span class='rubyid_all_param_names identifier id'>all_param_names</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span><span class='lparen token'>(</span><span class='rubyid_delimiter identifier id'>delimiter</span><span class='rparen token'>)</span>
+  
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_s-instance_method">
+  
+    - (<tt>String</tt>) <strong>to_s</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Converts the event to a string representation.  This is the same as calling
+<span class='object_link'><a href="#to_s_delim-instance_method" title="FCSParse::FCSEvent#to_s_delim (method)">#to_s_delim</a></span> with the delimiter set to <span class='object_link'><a href="#DefaultDelimiter-constant" title="FCSParse::FCSEvent::DefaultDelimiter (constant)">DefaultDelimiter</a></span>.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a String containing delimited ordered parameter values.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+207
+208
+209
+210
+211</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/fcsparse/fcsevent.rb', line 207</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_to_s identifier id'>to_s</span>
+  
+  <span class='rubyid_to_s_delim identifier id'>to_s_delim</span><span class='lparen token'>(</span><span class='rubyid_DefaultDelimiter constant id'>DefaultDelimiter</span><span class='rparen token'>)</span>
+  
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_s_delim-instance_method">
+  
+    - (<tt>String</tt>) <strong>to_s_delim</strong>(delimiter) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Gets the values of the parameters associated with this event ordered 
+alphabetically by the parameter names (i.e. in the same order as when
+calling <span class='object_link'><a href="#names_to_s_delim-instance_method" title="FCSParse::FCSEvent#names_to_s_delim (method)">#names_to_s_delim</a></span>), delimited by the supplied delimiter.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>delimiter</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a String containing the desired delimiter.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a String containing delimited ordered parameter values.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+191
+192
+193
+194
+195
+196
+197
+198
+199</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/fcsparse/fcsevent.rb', line 191</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_to_s_delim identifier id'>to_s_delim</span><span class='lparen token'>(</span><span class='rubyid_delimiter identifier id'>delimiter</span><span class='rparen token'>)</span>
+        
+  <span class='rubyid_all_param_names identifier id'>all_param_names</span> <span class='assign token'>=</span> <span class='rubyid_@values ivar id'>@values</span><span class='dot token'>.</span><span class='rubyid_keys identifier id'>keys</span><span class='dot token'>.</span><span class='rubyid_sort identifier id'>sort</span>
+  
+  <span class='rubyid_all_param_values identifier id'>all_param_values</span> <span class='assign token'>=</span> <span class='rubyid_all_param_names identifier id'>all_param_names</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='rubyid_e identifier id'>e</span><span class='bitor op'>|</span> <span class='rubyid_@values ivar id'>@values</span><span class='lbrack token'>[</span><span class='rubyid_e identifier id'>e</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_value identifier id'>value</span><span class='rbrace token'>}</span>
+  
+  <span class='rubyid_all_param_values identifier id'>all_param_values</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span><span class='lparen token'>(</span><span class='rubyid_delimiter identifier id'>delimiter</span><span class='rparen token'>)</span>
+  
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Wed Jun 20 16:53:16 2012 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.2.1 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>
