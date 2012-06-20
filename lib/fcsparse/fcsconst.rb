@@ -24,44 +24,69 @@
 #  * ***** END LICENSE BLOCK ***** */
 #++
 
+##
+# Contains all classes and constants for parsing FCS v3.x formatted files.
+#
 module FCSParse
-
-#header constants
-
+  
+  #
+  # Contains constants associated with the fcs file format, such as byte offsets
+  # and parameter names.
+  # 
+  # The first character of each constant name specifies the section of the fcs file
+  # to which it is relevant.  (H = header, T = text, etc.)
+  # 
+  # @author Colin J. Fuller
+  #
+  
+  #byte offsets to the start and end of the version string
   H_VersionStart = 0
   H_VersionEnd = 5
   
+  #length of the block specifying the offsets of text, data, analysis sections
   H_OffsetBlockLength = 8
   
+  #offsets to the start and end of the text section offset
   H_TextBlockOffsetStart = 10
   H_TextBlockOffsetEnd = 18
   
+  #offsets to the start and end of the data section offset
   H_DataBlockOffsetStart = 26
   H_DataBlockOffsetEnd = 34
   
+  #offsets to the start and end of the analysis section offset
   H_AnalysisBlockOffsetStart = 42 
   H_AnalysisBlockOffsetEnd = 50
   
+  #keyword specifying offset to supplementary text section
   T_SupplTextStartKeyword = :$BEGINSTEXT
   T_SupplTextEndKeyword = :$ENDSTEXT
   
+  #keyword specifying offset to analysis section
   T_AnalysisStartKeyword = :$BEGINANALYSIS
   T_AnalysisEndKeyword = :$BEGINANALYSIS
   
+  #keyword specifying offset to data section
   T_DataStartKeyword = :$BEGINDATA
   T_DataEndKeyword = :$ENDDATA
   
+  #keyword specifying the data mode
   T_ModeKeyword = :$MODE
   
+  #keyword specifying the data type (e.g. integer, float, etc)
   T_DatatypeKeyword = :$DATATYPE
   
+  #keyword specifying byte order and value when little endian
   T_ByteorderKeyword = :$BYTEORD
   T_LittleEndianByteorder = "1,2,3,4"
   
+  #keyword specifying the number of parameters measured per event
   T_ParameterCountKeyword = :$PAR
   
+  #keyword specifying total number of events
   T_EventCountKeyword = :$TOT
   
+  #regular expressions matching names and ranges of all parameters
   T_ParameterNameKeywordRegex = /P(\d+)N/
   T_ParameterRangeKeywordRegex = /P(\d+)R/
 

@@ -26,10 +26,26 @@
 
 require 'fcsparse/fcsconst'
 
+##
+# Contains all classes and constants for parsing FCS v3.x formatted files.
+#
 module FCSParse
   
+  ##
+  # Class representing a single parameter and its value in a single event.
+  # 
+  # @author Colin J. Fuller
+  # 
   class FCSParam
     
+    ##
+    # Create a new parameter with specified information
+    # 
+    # @param name   the name of the parameter
+    # @param description  a longer description of the parameter
+    # @param value  the value of the parameter
+    # @param limit  the maximum value that the parameter can take
+    # 
     def initialize(name, description, value, limit)
       
       @name = name
@@ -43,8 +59,40 @@ module FCSParse
     
   end
   
+  
+  ##
+  # Class representing a single FCS-encoded event.
+  # 
+  # @author Colin J. Fuller
+  # 
   class FCSEvent
     
+    #default delimiter for printing output
+    DefaultDelimiter = ","
+    
+    private_class_method :new
+    
+    def initialize
+      
+      @values = Hash.new
+      
+    end
+    
+    
+    ##
+    # Creates a new FCSEvent from the specified information.
+    # 
+    # @param [String] event_data_string   the raw data corresponding to the
+    #         entire event from the fcs file
+    # @param [String] event_format_string a string suitable for use with String#unpack
+    #         that can decode the raw data.
+    # @param [Hash] parameter_info_hash   a hash containing at minimum the parameters
+    #         from the text section specifying the names and ranges of the parameters
+    #         keys should be the parameter names from the fcs file format converted
+    #         to symbols ($ included), and values should be a string corresponding
+    #         to the value of the parameter from the fcs file.
+    # @return [FCSEvent] an FCSEvent that has been created by parsing the raw data.
+    # 
     def self.new_with_data_and_format(event_data_string, event_format_string, parameter_info_hash)
     
       data_points = event_data_string.unpack(event_format_string)
@@ -88,28 +136,42 @@ module FCSParse
       
       event
               
-    end
+    end    
     
-    
-    
-    def initialize
-      
-      @values = Hash.new
-      
-    end
-    
+    ##
+    # Gets a named parameter associated with the event.
+    # 
+    # @param [String] parameter_name  the name of the parameter to retrieve; this should be 
+    #                 exactly the name specified for the parameter in the text
+    #                 section of the fcs file
+    # @return [FCSParam]  an FCSParam object that holds the information about the named parameter.
+    # 
     def [](parameter_name)
       
       @values[parameter_name]
       
     end
     
+    ##
+    # Sets a named parameter associated with the event.
+    # @param [String] parameter_name  the name of the parameter to retrieve; this should be 
+    #                 exactly the name specified for the parameter in the text
+    #                 section of the fcs file
+    # @param [FCSParam] value   an FCSParam object that holds the information about the named parameter.
+    # 
     def []=(parameter_name, value)
       
       @values[parameter_name]= value
       
     end
     
+    ##
+    # Gets the names of the parameters associated with this event in alphabetical
+    # order as a string, delimited by the supplied delimiter.
+    # 
+    # @param [String] delimiter a String containing the desired delimiter.
+    # @return [String]  a String containing delimited alphabetized parameter names.
+    # 
     def names_to_s_delim(delimiter)
       
       all_param_names = @values.keys.sort
@@ -118,6 +180,14 @@ module FCSParse
       
     end
     
+    ##
+    # Gets the values of the parameters associated with this event ordered 
+    # alphabetically by the parameter names (i.e. in the same order as when calling
+    # {#names_to_s_delim}), delimited by the supplied delimiter.
+    # 
+    # @param [String]delimiter a String containing the desired delimiter.
+    # @return [String]  a String containing delimited ordered parameter values.
+    #
     def to_s_delim(delimiter)
             
       all_param_names = @values.keys.sort
@@ -128,9 +198,15 @@ module FCSParse
       
     end
     
+    ##
+    # Converts the event to a string representation.  This is the same as calling
+    # {#to_s_delim} with the delimiter set to {FCSEvent::DefaultDelimiter}.
+    # 
+    # @return [String]  a String containing delimited ordered parameter values.
+    #
     def to_s
       
-      to_s_delim(",")
+      to_s_delim(DefaultDelimiter)
       
     end
 

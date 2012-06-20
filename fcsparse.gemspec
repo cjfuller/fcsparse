@@ -6,6 +6,7 @@ Gem::Specification.new do |s|
   s.description = "Parses flow cytometry FCS v3.x files and allows output to plain (delimited) text."
   s.authors     = ["Colin J. Fuller"]
   s.email       = 'cjfuller@gmail.com'
+  s.homepage    = "http://code.google.com/p/fcsparse/"
   s.files       = Dir['lib/**/*.rb']
   s.platform    = Gem::Platform::RUBY
   s.license     = 'MIT'
