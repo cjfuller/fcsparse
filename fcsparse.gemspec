@@ -12,8 +12,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Colin J. Fuller"]
   s.email       = 'cjfuller@gmail.com'
   s.homepage    = "http://github.com/cjfuller/fcsparse"
-  s.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   s.files       = `git ls-files`.split($/)
+  s.executables   = s.files.grep(%r{^bin/}) { |f| File.basename(f) }
   s.require_paths = ["lib"]
   s.platform    = Gem::Platform::RUBY
   s.license     = 'MIT'
