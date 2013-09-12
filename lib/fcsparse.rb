@@ -356,8 +356,3 @@ module FCSParse
 
 end
 
-if __FILE__ == $0 then
-  
-  FCSParse.process_file(ARGV[0], false)
-  
-end
